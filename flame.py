@@ -21,14 +21,12 @@ def reorder(count):
         Flame = Flames[2:]
         Flame.append(Flames[0])
         Flame.append(Flames[1])
-        print(Flame)
         return Flame
     elif count == 3:
         Flame = Flames[3:]
         Flame.append(Flames[0])
         Flame.append(Flames[1])
         Flame.append(Flames[2])
-        print(Flame)
         return Flame
     elif count == 4:
         Flame = Flames[4:]
@@ -36,16 +34,13 @@ def reorder(count):
         Flame.append(Flames[1])
         Flame.append(Flames[2])
         Flame.append(Flames[3])
-        print(Flame)
         return Flame
     elif count == 1:
         Flame = Flames[1:]
         Flame.append(Flames[0])
-        print(Flame)
         return Flame
     else:
         Flame = Flames[0:]
-        print(Flame)
         return Flame
 
 
@@ -53,32 +48,22 @@ while i < 5:
 
     if total_letters <= len(Flame):
         count = len(Flame) - 1
-        print(Flame)
         del Flame[total_letters - 1]
         Flames = Flame.copy()
-        print(count)
-        print(Flames)
         reorder(count)
-        print(Flame)
     elif total_letters % len(Flame) == 0:
         count = len(Flame) - 1
-        print(Flame)
+
         del Flame[len(Flame) - 1]
         Flames = Flame.copy()
-        print(count)
-        print(Flames)
         reorder(count)
-        print(Flame)
     else:
         b = total_letters % len(Flame)
         count = b - 1
-        print(Flame)
         del Flame[b - 1]
         Flames = Flame.copy()
-        print(count)
-        print(Flames)
         reorder(count)
-        print(Flame)
+
 
     if len(Flame) == 1:
         break
@@ -94,6 +79,6 @@ elif Flame[0] == "A":
 elif Flame[0] == "M":
     print("YOU BOTH WILL GET MARRIED EACH OTHER")
 elif Flame[0] == "E":
-    print("YOU BOTH WILL BECOME ENEMIES SOON")
+    print("YOU BOTH ARE ENEMIES ")
 else:
     print("YOU BOTH ARE BROTHERS AND SISTERS")
